@@ -26,7 +26,7 @@ const skills = [
         color: "#3B82F6", 
         tags: "LIBLIB, Comfy UI, Web UI",
         // FIX: Using jsDelivr
-        previewImg: "https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/capa-grass.png",
+        previewImg: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/capa-grass.png",
         previewRotate: 8,
         previewText: "GRASS"
     },
@@ -38,7 +38,7 @@ const skills = [
         color: "#EA580C", 
         tags: "C4D, Blender, Rendering",
         // FIX: Using jsDelivr
-        previewImg: "https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/capa-%E7%99%BD%E7%BE%8A.png",
+        previewImg: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/capa-%E7%99%BD%E7%BE%8A.png",
         previewRotate: -12,
         previewText: "Myself"
     },

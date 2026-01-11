@@ -8,12 +8,12 @@ import Spotlight3D from '../components/Spotlight3D';
 // 🔥 IMPORTANT: Update your long image URL here!
 // 这是一个防止回退的常量。请在这里填入你最新的长图链接。
 // Adding ?v=2 to bust cache if you replaced the file on GitHub.
-const PROJECT_1_LONG_IMAGE = 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
-const PROJECT_1_LONG_IMAGE_2 = 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+const PROJECT_1_LONG_IMAGE = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+const PROJECT_1_LONG_IMAGE_2 = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
 
 // 🟢 👇 PROJECT 2 CONFIGURATION
-// 🟢 请在这里填入你第二个项目的长图链接 (目前使用占位图，请替换它)
-const PROJECT_2_LONG_IMAGE = 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
+// 🟢 请在这里填入你第二个项目的长图链接
+const PROJECT_2_LONG_IMAGE = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
 
 
 // --- ICONS DATA ---
@@ -23,7 +23,7 @@ const TOOL_ICONS: Record<string, string> = {
     'AI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg',
     'AE': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg',
     'Blender': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg',
-    'C4D': 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/1197px-C4D_Logo.png',
+    'C4D': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/1197px-C4D_Logo.png',
     'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png',
     'Jimeng': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png',
@@ -65,7 +65,7 @@ const projects = [
   { 
       id: 3, title: '猿辅导运营设计', label: 'VISUAL DESIGN', year: '2022', color: '#4DA6FF', 
       shadowColor: '#4DA6FF',
-      img: 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png', 
+      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png', 
       desc: 'Cyberpunk aesthetic visual identity system for a futuristic fashion label.',
       tools: ['PS', 'AI', 'C4D']
   },

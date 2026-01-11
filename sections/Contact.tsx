@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue, useMotionTe
 // --- CONFIGURATION ---
 // 🟢 👇 PASTE YOUR WECHAT QR CODE IMAGE LINK HERE
 // 您可以在这里替换您的微信二维码图片链接
-const WECHAT_QR_CODE_URL = "https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E6%88%91%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg";
+const WECHAT_QR_CODE_URL = "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg";
 
 // --- ICONS ---
 const ICONS = {
@@ -43,7 +43,7 @@ const CONTACT_CARDS = [
         value: '+86 186 2517 5759',
         color: '#3B82F6', // Blue
         icon: ICONS.Phone,
-        position: { x: '-150%', y: '-15%' }, 
+        position: { x: '-150%', y: '-0%' }, 
         rotation: 12,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度 (0 为不旋转，正数顺时针，负数逆时针)
         hoverRotation: 15
@@ -54,7 +54,7 @@ const CONTACT_CARDS = [
         value: '1368069338@qq.com',
         color: '#F97316', // Orange
         icon: ICONS.Email,
-        position: { x: '-80%', y: '-15%' }, 
+        position: { x: '-80%', y: '-0%' }, 
         rotation: 5,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度
         hoverRotation: 7
@@ -65,7 +65,7 @@ const CONTACT_CARDS = [
         value: 'JayNeySil',
         color: '#07C160', // WeChat Green
         icon: ICONS.WeChat,
-        position: { x: '5%', y: '-15%' }, 
+        position: { x: '5%', y: '-0%' }, 
         rotation: -11,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度
         hoverRotation: -14,
@@ -77,7 +77,7 @@ const CONTACT_CARDS = [
         value: 'Glei_Art',
         color: '#FF2442', // Xiaohongshu Red
         icon: ICONS.Xiaohongshu,
-        position: { x: '100%', y: '-15%' }, 
+        position: { x: '100%', y: '-0%' }, 
         rotation: -16,
         // 🟢 👇 修改这里：目前设置了 12 度，使其向右旋转 (您可以改成其他数值)
         hoverRotation: -18 

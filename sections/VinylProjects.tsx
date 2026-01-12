@@ -27,7 +27,8 @@ const TOOL_ICONS: Record<string, string> = {
     'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png',
     'Jimeng': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png',
-    'Pinterest': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pinterest/pinterest-original.svg'
+    'Pinterest': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pinterest/pinterest-original.svg',
+    'LibLib': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/LibLib.png'
 };
 
 // --- PROJECT DATA ---
@@ -70,10 +71,10 @@ const projects = [
       tools: ['PS', 'AI', 'C4D']
   },
   { 
-      id: 4, title: 'Urban Pulse', label: 'UI/UX APP', year: '2022', color: '#FFCC55', 
-      img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000&auto=format&fit=crop', 
+      id: 4, title: '卫岗形象设计之LoRA炼制', label: 'LOGO / IP DESIGN', year: '2022', color: '#EA2F2F', 
+      img: 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg', 
       desc: 'Rhythm of city life captured in a rhythmic event discovery application.',
-      tools: ['Figma', 'AE']
+      tools: ['Figma', 'LibLib', 'PS']
   },
   { 
       id: 5, title: 'Nature Sync', label: 'IOT INTERFACE', year: '2021', color: '#66DD88', 

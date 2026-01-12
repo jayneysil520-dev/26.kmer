@@ -377,18 +377,27 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
     // 🟢 UTILITIES FOR PERCENTAGE POSITIONING
     // Based on your Figma/Design design dimensions
     const DESIGN_WIDTH = 1920;
-    const DESIGN_HEIGHT = 11500; // Estimated from your previous code
+    
+    // 🔥 CRITICAL FIX: The Modal uses w-[95vw], so the content is 95vw wide.
+    const MODAL_WIDTH_VW = 95; 
 
     // Helper: Converts Design X,Y to Percentage Top/Left
     // Usage: style={getPos(200, 2675)}
+    // 
+    // Logic:
+    // Left: Simply percentage of container width. (x / 1920) * 100%
+    // Top:  Since the image maintains aspect ratio based on WIDTH, 
+    //       the vertical distance corresponds to the WIDTH scaling.
+    //       Formula: (y / DESIGN_WIDTH) * (ACTUAL_WIDTH_IN_VW) + 'vw'
+    //       This makes the Y position responsive to the Width, just like the image height is!
     const getPos = (x: number, y: number) => ({
         left: `${(x / DESIGN_WIDTH) * 100}%`,
-        top: `${(y / DESIGN_HEIGHT) * 100}%`
+        top: `${(y / DESIGN_WIDTH) * MODAL_WIDTH_VW}vw` 
     });
 
     // Helper: Converts Design FontSize to VW (responsive text)
     // Usage: fontSize: getSize(240)
-    const getSize = (size: number) => `${(size / DESIGN_WIDTH) * 100}vw`;
+    const getSize = (size: number) => `${(size / DESIGN_WIDTH) * MODAL_WIDTH_VW}vw`;
 
     return (
         <div

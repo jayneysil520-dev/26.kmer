@@ -128,7 +128,7 @@ const Card3D: React.FC<{ item: typeof CONTACT_CARDS[number]; index: number }> = 
             className="absolute perspective-1000"
             style={{
                 left: '50%',
-                top: '25%', // Centered container
+                top: '35%', // 🟢 Changed from 25% to 35%
                 x: item.position.x, 
                 y: item.position.y,
                 zIndex: isHovered ? 100 : 10,
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
                         text="CONTACT ME" 
                         rotate={-10} 
                         className="text-[120px] md:text-[180px] font-albert-black text-gray-100 leading-none" 
-                        style={{ top: '40%' }}
+                        style={{ top: '50%' }} // 🟢 Changed from 40% to 50%
                     />
 
                     {/* Cards Container */}

@@ -29,7 +29,14 @@ const heroCards = [
       // Placeholder for 3rd card content - Replace with your image
       img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png'
   }, 
-  { id: 4, color: '#00FF40', rotate: 10, scale: 0.9 }, 
+  { 
+      id: 4, 
+      color: '#EA2F2F', 
+      rotate: 10, 
+      scale: 0.9,
+      // 🟢 👇 第四张卡片：请在这里把引号内的链接换成你想要的图片链接
+      img: 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg'
+  }, 
   { id: 5, color: '#FFCCAA', rotate: 5, scale: 1.0 }, 
 ];
 

@@ -43,7 +43,7 @@ const CONTACT_CARDS = [
         value: '+86 186 2517 5759',
         color: '#3B82F6', // Blue
         icon: ICONS.Phone,
-        position: { x: '-150%', y: '-0%' }, 
+        position: { x: '-150%', y: '-15%' }, 
         rotation: 12,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度 (0 为不旋转，正数顺时针，负数逆时针)
         hoverRotation: 15
@@ -54,7 +54,7 @@ const CONTACT_CARDS = [
         value: '1368069338@qq.com',
         color: '#F97316', // Orange
         icon: ICONS.Email,
-        position: { x: '-80%', y: '-0%' }, 
+        position: { x: '-80%', y: '-14%' }, 
         rotation: 5,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度
         hoverRotation: 7
@@ -65,7 +65,7 @@ const CONTACT_CARDS = [
         value: 'JayNeySil',
         color: '#07C160', // WeChat Green
         icon: ICONS.WeChat,
-        position: { x: '5%', y: '-0%' }, 
+        position: { x: '5%', y: '-18%' }, 
         rotation: -11,
         // 🟢 👇 修改这里：调整 Hover 时的旋转角度
         hoverRotation: -14,
@@ -77,7 +77,7 @@ const CONTACT_CARDS = [
         value: 'Glei_Art',
         color: '#FF2442', // Xiaohongshu Red
         icon: ICONS.Xiaohongshu,
-        position: { x: '100%', y: '-0%' }, 
+        position: { x: '100%', y: '-16%' }, 
         rotation: -16,
         // 🟢 👇 修改这里：目前设置了 12 度，使其向右旋转 (您可以改成其他数值)
         hoverRotation: -18 

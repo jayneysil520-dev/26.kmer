@@ -58,7 +58,7 @@ const projects = [
       year: '2025', 
       color: '#FFA500', 
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2-1.png', 
-      desc: 'An immersive digital coastline experience bringing the ocean breeze.',
+      desc: '得力在手，蛋仔脑洞全开',
       tools: ['Figma', 'Jimeng', 'PS', 'Blender'],
       layout: 'gallery',
       detailImages: [
@@ -91,13 +91,13 @@ const projects = [
       tools: ['C4D', 'AE', 'PS']
   },
   { 
-      id: 7, title: 'Glass Horizons', label: 'WEB AWARDS', year: '2020', color: '#4ECDC4', 
+      id: 7, title: '3D设计长廊', label: 'Gallery', year: '2021-2025', color: '#4ECDC4', 
       img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop', 
       desc: 'Portfolio site featuring heavy use of glassmorphism and depth effects.',
-      tools: ['React', 'Figma']
+      tools: ['C4D', 'Blender', 'AE']
   },
   { 
-      id: 8, title: 'Silent Echo', label: 'AUDIO VIZ', year: '2020', color: '#FF0055', 
+      id: 8, title: '自媒体设计能力沉淀', label: 'Personal Growth', year: '2021-2026', color: '#FF0055', 
       img: 'https://images.unsplash.com/photo-1515405295579-ba7f45403022?q=80&w=1000&auto=format&fit=crop', 
       desc: 'Visualizing sound waves in real-time using WebAudio API and Canvas.',
       tools: ['ThreeJS', 'Blender']

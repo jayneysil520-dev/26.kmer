@@ -479,7 +479,10 @@ const Profile: React.FC = () => {
       y.set(clientY / h - 0.5);
   };
 
+  // 🟢 ADJUST PERSPECTIVE HERE (TILT ANGLE)
+  // 调整这里的角度可以改变 About Me 页面的透视感 (数值越大倾斜越明显)
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["35deg", "25deg"]);
+
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-5deg", "5deg"]);
   const translateX = useTransform(mouseXSpring, [-0.5, 0.5], ["-1%", "1%"]);
 

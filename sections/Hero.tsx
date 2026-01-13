@@ -17,7 +17,7 @@ const heroCards = [
   { 
       id: 2, 
       color: '#00A2E8', 
-      rotate: 8, 
+      rotate: -8, 
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2.png',
       scale: 1.05
   }, 
@@ -40,7 +40,7 @@ const heroCards = [
   { id: 5, color: '#FFCCAA', rotate: 5, scale: 1.0 }, 
 ];
 
-// --- DEPTH CONFIGURATION ---
+// --- DEPTH CONFIG ---
 const DEPTHS = {
     FLOOR: -300,
     PROPS: -290,
@@ -50,11 +50,11 @@ const DEPTHS = {
 
 // --- LAYOUT CONFIG ---
 const layoutConfig = [
-    { left: '15%', top: '45%', zIndex: 10 }, 
-    { left: '65%', top: '50%', zIndex: 12 }, 
-    { left: '25%', top: '65%', zIndex: 14 }, 
-    { left: '80%', top: '40%', zIndex: 8 },  
-    { left: '50%', top: '55%', zIndex: 15 }, 
+    { left: '8%', top: '40%', zIndex: 10 }, 
+    { left: '65%', top: '45%', zIndex: 12 }, 
+    { left: '25%', top: '55%', zIndex: 14 }, 
+    { left: '80%', top: '35%', zIndex: 8 },  
+    { left: '50%', top: '45%', zIndex: 15 }, 
 ];
 
 const Hero: React.FC = () => {
@@ -81,7 +81,11 @@ const Hero: React.FC = () => {
         y.set(clientY / h - 0.5);
     };
 
-    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["35deg", "25deg"]);
+    // 🟢 ADJUST PERSPECTIVE HERE (TILT ANGLE)
+    // 调整这里的角度可以改变第一页的镜头透视感 (数值越大倾斜越明显)
+    // Original: ["35deg", "20deg"]
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["35deg", "20deg"]); 
+
     const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-5deg", "5deg"]);
     const translateX = useTransform(mouseXSpring, [-0.5, 0.5], ["-2%", "2%"]);
 
@@ -96,7 +100,12 @@ const Hero: React.FC = () => {
                 className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center will-change-transform"
                 onViewportEnter={() => setHasEntered(true)}
              >
-                <div className="absolute inset-0 flex items-center justify-center perspective-2000">
+                {/* 
+                    🟢 3D CONTAINER: perspective-2000
+                    You can change 'perspective-2000' to 'perspective-1000' for more dramatic 3D effect,
+                    or 'perspective-3000' for flatter look.
+                */}
+                <div className="absolute inset-0 flex items-center justify-center perspective-1000">
                     <motion.div
                         // OPTIMIZATION: Added transform-gpu to force hardware acceleration
                         className="relative w-full max-w-[1400px] will-change-transform transform-gpu"
@@ -170,6 +179,9 @@ const Hero: React.FC = () => {
                                 >
                                     <Magnetic strength={30}>
                                         <Spotlight3D 
+                                            // 🟢 ADJUST SHADOW HERE
+                                            // 调整这里的 shadow-[...] 数值来改变卡片阴影
+                                            // 例如: shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] 会更深
                                             className="w-full h-full rounded-[2.5rem] bg-white/10 backdrop-blur-md border border-white/30 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)]" 
                                             color={card.color}
                                             enableElasticScale={false} 

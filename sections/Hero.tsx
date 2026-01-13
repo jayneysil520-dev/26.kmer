@@ -5,20 +5,20 @@ import PatternPlaceholder from '../components/PatternPlaceholder';
 import Magnetic from '../components/Magnetic';
 
 // --- DATA ---
-// FIX: Using jsDelivr CDN for China accessibility
+// 🟢 FIX: Using China-accessible CDN mirror (jsd.cdn.zzko.cn)
 const heroCards = [
   { 
       id: 1, 
       color: '#FF7F27', 
       rotate: -12, 
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/1.png',
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1.png',
       scale: 1.15
   }, 
   { 
       id: 2, 
       color: '#00A2E8', 
       rotate: 8, 
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/2.png',
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2.png',
       scale: 1.05
   }, 
   { 
@@ -27,15 +27,15 @@ const heroCards = [
       rotate: -15, 
       scale: 0.95,
       // Placeholder for 3rd card content - Replace with your image
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png'
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png'
   }, 
   { 
       id: 4, 
       color: '#EA2F2F', 
       rotate: 10, 
       scale: 0.9,
-      // 🟢 👇 第四张卡片：请在这里把引号内的链接换成你想要的图片链接
-      img: 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg'
+      // 🟢 修复：将 GitHub Raw 链接替换为国内镜像链接
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg'
   }, 
   { id: 5, color: '#FFCCAA', rotate: 5, scale: 1.0 }, 
 ];

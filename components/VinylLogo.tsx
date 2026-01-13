@@ -2,27 +2,27 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- 音乐播放列表配置 ---
-// FIX: Using jsDelivr for China accessibility
+// FIX: Using jsDelivr Mirror for China accessibility
 const PLAYLIST = [
     {
         title: "Head in the clouds",
-        url: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/1.mp3" 
+        url: "https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1.mp3" 
     },
     {
         title: "Un Amico", 
-        url: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/2.mp3" 
+        url: "https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2.mp3" 
     },
     {
         title: "Death bed",
-        url: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/3.mp3"
+        url: "https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/3.mp3"
     },
     {
         title: "Luv(sic.)pt3", 
-        url: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/4.mp3" 
+        url: "https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/4.mp3" 
     },
     {
         title: "Repeat until death", 
-        url: "https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/5.mp3" 
+        url: "https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/5.mp3" 
     },
 ];
 

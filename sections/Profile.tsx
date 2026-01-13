@@ -390,8 +390,8 @@ const StablePhoto: React.FC<{ hasEntered: boolean }> = ({ hasEntered }) => {
             >
                 <div className="w-full h-full relative overflow-hidden rounded-[1.5rem] bg-gray-100 transform-style-3d">
                     <img 
-                        // FIX: Updated to jsDelivr
-                        src="https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/Group%20508.png" 
+                        // FIX: Updated to jsDelivr Mirror
+                        src="https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/Group%20508.png" 
                         alt="Profile" 
                         // Grayscale to Color Transition
                         className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 ease-out will-change-filter"

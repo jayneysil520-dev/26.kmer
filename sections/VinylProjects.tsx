@@ -7,28 +7,30 @@ import Spotlight3D from '../components/Spotlight3D';
 
 // 🔥 IMPORTANT: Update your long image URL here!
 // 这是一个防止回退的常量。请在这里填入你最新的长图链接。
-// Adding ?v=2 to bust cache if you replaced the file on GitHub.
-const PROJECT_1_LONG_IMAGE = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
-const PROJECT_1_LONG_IMAGE_2 = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+// 🟢 FIX: 使用国内镜像
+const PROJECT_1_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+const PROJECT_1_LONG_IMAGE_2 = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
 
 // 🟢 👇 PROJECT 2 CONFIGURATION
 // 🟢 请在这里填入你第二个项目的长图链接
-const PROJECT_2_LONG_IMAGE = 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
+const PROJECT_2_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
 
 
 // --- ICONS DATA ---
+// 🟢 FIX: 所有的图标也使用国内镜像（devicon的官方cdn有时候也慢，这里尽量替换或者保持原样如果它是svg）
+// Devicon 一般在 cdn.jsdelivr.net 上，我们也替换成镜像
 const TOOL_ICONS: Record<string, string> = {
-    'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-    'PS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg',
-    'AI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg',
-    'AE': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg',
-    'Blender': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg',
-    'C4D': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/1197px-C4D_Logo.png',
-    'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png',
-    'Jimeng': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png',
-    'Pinterest': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pinterest/pinterest-original.svg',
-    'LibLib': 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/LibLib.png'
+    'Figma': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/figma/figma-original.svg',
+    'PS': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg',
+    'AI': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg',
+    'AE': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg',
+    'Blender': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/blender/blender-original.svg',
+    'C4D': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1197px-C4D_Logo.png',
+    'React': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/react/react-original.svg',
+    'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png', // This one is external, keep or mirror if possible
+    'Jimeng': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png',
+    'Pinterest': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/pinterest/pinterest-original.svg',
+    'LibLib': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/LibLib.png'
 };
 
 // --- PROJECT DATA ---
@@ -40,7 +42,7 @@ const projects = [
       year: '2025', 
       client: 'DELI', 
       color: '#FF7F27', 
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/1-1.png', 
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1-1.png', 
       desc: 'Creating a magical land named "Heart Language Forest" for Deli\'s European and American markets.',
       tools: ['Jimeng', 'PS', 'Figma', 'Blender'],
       layout: 'gallery', 
@@ -55,7 +57,7 @@ const projects = [
       label: 'VISUAL DESIGN', 
       year: '2025', 
       color: '#FFA500', 
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/2-1.png', 
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2-1.png', 
       desc: 'An immersive digital coastline experience bringing the ocean breeze.',
       tools: ['Figma', 'Jimeng', 'PS', 'Blender'],
       layout: 'gallery',
@@ -66,13 +68,13 @@ const projects = [
   { 
       id: 3, title: '猿辅导运营设计', label: 'VISUAL DESIGN', year: '2022', color: '#4DA6FF', 
       shadowColor: '#4DA6FF',
-      img: 'https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png', 
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png', 
       desc: 'Cyberpunk aesthetic visual identity system for a futuristic fashion label.',
       tools: ['PS', 'AI', 'C4D']
   },
   { 
       id: 4, title: '卫岗形象设计之LoRA炼制', label: 'LOGO / IP DESIGN', year: '2022', color: '#EA2F2F', 
-      img: 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg', 
+      img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png', 
       desc: 'Rhythm of city life captured in a rhythmic event discovery application.',
       tools: ['Figma', 'LibLib', 'PS']
   },

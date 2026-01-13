@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glei Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- 🟢 修复：将 Google Fonts 替换为国内镜像 fonts.font.im，解决加载阻塞问题 -->
+  <link rel="preconnect" href="https://fonts.font.im">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inter:wght@300;400;500;600;700&family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap"
+    href="https://fonts.font.im/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inter:wght@300;400;500;600;700&family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap"
     rel="stylesheet">
   
   <!-- 修复关键：添加 Tailwind CSS CDN，让样式立即生效 -->
@@ -34,75 +35,76 @@
   </script>
 
   <style>
-    /* --- CUSTOM FONTS FROM GITHUB (Updated to jsDelivr CDN) --- */
+    /* --- CUSTOM FONTS FROM GITHUB (Updated to China Mirror) --- */
+    /* 🟢 修复：所有字体文件链接替换为 jsd.cdn.zzko.cn 国内镜像 */
     @font-face {
         font-family: 'Franklin Gothic Book';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRABK.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRABK.TTF') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Book Italic';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRABKIT.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRABKIT.TTF') format('truetype');
         font-weight: normal;
         font-style: italic;
     }
     @font-face {
         font-family: 'Franklin Gothic Demi';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRADM.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRADM.TTF') format('truetype');
         font-weight: 600;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Demi Condensed';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRADMCN.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRADMCN.TTF') format('truetype');
         font-weight: 600;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Demi Italic';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRADMIT.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRADMIT.TTF') format('truetype');
         font-weight: 600;
         font-style: italic;
     }
     @font-face {
         font-family: 'Franklin Gothic Heavy';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRAHV.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRAHV.TTF') format('truetype');
         font-weight: 900;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Heavy Italic';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRAHVIT.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRAHVIT.TTF') format('truetype');
         font-weight: 900;
         font-style: italic;
     }
     @font-face {
         font-family: 'Franklin Gothic Medium';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRAMD.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRAMD.TTF') format('truetype');
         font-weight: 500;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Medium Cond'; /* This is the one used for Fehn */
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRAMDCN.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRAMDCN.TTF') format('truetype');
         font-weight: 500;
         font-style: normal;
     }
     @font-face {
         font-family: 'Franklin Gothic Medium Italic';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/FRAMDIT.TTF') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/FRAMDIT.TTF') format('truetype');
         font-weight: 500;
         font-style: italic;
     }
     @font-face {
         font-family: 'OPPOSans H';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/OPPOSans-H.ttf') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/OPPOSans-H.ttf') format('truetype');
         font-weight: 900;
     }
     @font-face {
         font-family: 'Arizonia';
-        src: url('https://cdn.jsdelivr.net/gh/jayneysil520-dev/jayneysil@main/Arizonia-Regular.ttf') format('truetype');
+        src: url('https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/Arizonia-Regular.ttf') format('truetype');
     }
 
     body {

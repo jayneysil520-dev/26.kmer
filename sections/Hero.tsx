@@ -12,20 +12,21 @@ const heroCards = [
       color: '#FF7F27', 
       rotate: -12, 
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1.png',
-      scale: 1.15
+      // 🟢 这里控制每张卡片的独立缩放比例 (相对于基础尺寸)
+      scale: 1.25
   }, 
   { 
       id: 2, 
       color: '#00A2E8', 
       rotate: -8, 
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/2.png',
-      scale: 1.05
+      scale: 1.15
   }, 
   { 
       id: 3, 
       color: '#55FFFF', 
       rotate: -15, 
-      scale: 0.95,
+      scale: 1.1,
       // Placeholder for 3rd card content - Replace with your image
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%B0%81%E9%9D%A2.png'
   }, 
@@ -33,11 +34,11 @@ const heroCards = [
       id: 4, 
       color: '#EA2F2F', 
       rotate: 10, 
-      scale: 0.9,
+      scale: 1.18,
       // 🟢 修复：将 GitHub Raw 链接替换为国内镜像链接
       img: 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%8D%AB%E5%B2%97%E5%B0%81%E9%9D%A2hero.jpg'
   }, 
-  { id: 5, color: '#FFCCAA', rotate: 5, scale: 1.0 }, 
+  { id: 5, color: '#FFCCAA', rotate: 5, scale: 1.1 }, 
 ];
 
 // --- DEPTH CONFIGURATION ---
@@ -49,12 +50,13 @@ const DEPTHS = {
 };
 
 // --- LAYOUT CONFIG ---
+// 🟢 UPWARD SHIFT: Moved all 'top' values up by ~10%
 const layoutConfig = [
-    { left: '8%', top: '35%', zIndex: 10 }, 
-    { left: '65%', top: '40%', zIndex: 12 }, 
-    { left: '25%', top: '50%', zIndex: 14 }, 
-    { left: '80%', top: '35%', zIndex: 8 },  
-    { left: '50%', top: '45%', zIndex: 15 }, 
+    { left: '3%', top: '25%', zIndex: 10 },  // was 35%
+    { left: '58%', top: '30%', zIndex: 12 }, // was 40%
+    { left: '20%', top: '40%', zIndex: 14 }, // was 50%
+    { left: '78%', top: '25%', zIndex: 8 },  // was 35%
+    { left: '44%', top: '35%', zIndex: 15 }, // was 45%
 ];
 
 const Hero: React.FC = () => {
@@ -105,6 +107,7 @@ const Hero: React.FC = () => {
                             rotateY,
                             x: translateX,
                             y: floorY,
+                            scale: 0.8, // 🟢 80% ZOOM EFFECT
                             aspectRatio: '16/9',
                             transformStyle: "preserve-3d",
                         }}
@@ -113,7 +116,7 @@ const Hero: React.FC = () => {
                         <div className="absolute inset-[-50%] bg-white transform-preserve-3d" style={{ transform: `translateZ(${DEPTHS.FLOOR}px)` }} />
                         
                         {/* 1. Main Title - Animation Updated: Slide up from y: 150 */}
-                        <div className="absolute top-[15%] left-0 w-full text-center pointer-events-none" style={{ transform: `translateZ(${DEPTHS.TEXT}px) rotateX(-10deg)` }}>
+                        <div className="absolute top-[5%] left-0 w-full text-center pointer-events-none" style={{ transform: `translateZ(${DEPTHS.TEXT}px) rotateX(-10deg)` }}>
                              <motion.div 
                                 className="font-albert-black text-[6vw] md:text-[8vw] leading-none tracking-tighter mix-blend-multiply opacity-90 whitespace-nowrap flex flex-col justify-center items-center"
                                 // MODIFIED: Changed y from 60 to 150 for a deeper slide-up effect
@@ -142,7 +145,9 @@ const Hero: React.FC = () => {
                         {/* 2. Scattered Cards */}
                         {heroCards.map((card, idx) => {
                             const layout = layoutConfig[idx];
-                            const sizeClass = "w-[240px] md:w-[300px]";
+                            
+                            // 🟢 基础尺寸控制：修改这里的 w-[240px] (移动端) 和 md:w-[300px] (桌面端) 可以改变所有卡片的基准大小
+                            const sizeClass = "w-[280px] md:w-[340px]";
                             
                             const initialX = idx % 2 === 0 ? -1500 : 1500;
 
@@ -159,10 +164,12 @@ const Hero: React.FC = () => {
                                         z: DEPTHS.CARDS,
                                     }}
                                     initial={{ opacity: 0, x: initialX, rotate: card.rotate * 2 }}
-                                    animate={hasEntered ? { opacity: 1, x: 0, rotate: card.rotate } : {}}
+                                    // 🟢 关键修改：加入 scale: card.scale，让数据里的 scale 属性生效
+                                    animate={hasEntered ? { opacity: 1, x: 0, rotate: card.rotate, scale: card.scale } : {}}
                                     transition={{ duration: 0.6, delay: idx * 0.08, type: "spring", stiffness: 60, damping: 12 }}
                                     whileHover={{ 
                                         y: -40, 
+                                        // 悬停时在原有 scale 基础上放大 1.05 倍
                                         scale: card.scale * 1.05, 
                                         rotate: 0,
                                         transition: { duration: 0.3, ease: "easeOut" }

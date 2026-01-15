@@ -8,17 +8,12 @@ import Spotlight3D from '../components/Spotlight3D';
 // 🔥 IMPORTANT: Update your long image URL here!
 // 这是一个防止回退的常量。请在这里填入你最新的长图链接。
 // 🟢 FIX: 使用国内镜像
-const PROJECT_1_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
-const PROJECT_1_LONG_IMAGE_2 = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
-
-// 🟢 👇 PROJECT 2 CONFIGURATION
-// 🟢 请在这里填入你第二个项目的长图链接
+const PROJECT_1_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+const PROJECT_1_LONG_IMAGE_2 = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
 const PROJECT_2_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
 
 
 // --- ICONS DATA ---
-// 🟢 FIX: 所有的图标也使用国内镜像（devicon的官方cdn有时候也慢，这里尽量替换或者保持原样如果它是svg）
-// Devicon 一般在 cdn.jsdelivr.net 上，我们也替换成镜像
 const TOOL_ICONS: Record<string, string> = {
     'Figma': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/figma/figma-original.svg',
     'PS': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg',
@@ -27,7 +22,7 @@ const TOOL_ICONS: Record<string, string> = {
     'Blender': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/blender/blender-original.svg',
     'C4D': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/1197px-C4D_Logo.png',
     'React': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/react/react-original.svg',
-    'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png', // This one is external, keep or mirror if possible
+    'ThreeJS': 'https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png', 
     'Jimeng': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%8D%B3%E6%A2%A6icon.png',
     'Pinterest': 'https://jsd.cdn.zzko.cn/gh/devicons/devicon/icons/pinterest/pinterest-original.svg',
     'LibLib': 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/LibLib.png'
@@ -284,7 +279,7 @@ const RightPreviewCard: React.FC<{
             onClick={() => setSelectedProject(project)}
             className="absolute cursor-pointer will-change-transform"
             style={{
-                top: '25%',
+                top: '15%', // 🟢 MOVED UP from 25%
                 right: '1%', 
                 width: '750px', 
                 height: '280px', 
@@ -677,15 +672,16 @@ const VinylProjects: React.FC = () => {
         setHoveredProject(null);
     };
 
+    // 🟢 MOVED UP: Adjusted all card positions upwards ~10%
     const cardPositions = useMemo(() => [
-        { top: '-2%',  left: '5%',  rotate: -15, zIndex: 1 },
-        { top: '28%',  left: '30%', rotate: 12,  zIndex: 2 },
-        { top: '45%',  left: '8%',  rotate: 5,   zIndex: 3 },
-        { top: '70%',  left: '25%', rotate: -8,  zIndex: 4 },
-        { top: '100%', left: '2%',  rotate: 20,  zIndex: 5 },
-        { top: '125%', left: '32%', rotate: -12, zIndex: 6 },
-        { top: '155%', left: '10%', rotate: 8,   zIndex: 7 },
-        { top: '185%', left: '28%', rotate: -5,  zIndex: 8 },
+        { top: '-10%', left: '5%',  rotate: -15, zIndex: 1 }, // was -2%
+        { top: '20%',  left: '30%', rotate: 12,  zIndex: 2 }, // was 28%
+        { top: '37%',  left: '8%',  rotate: 5,   zIndex: 3 }, // was 45%
+        { top: '62%',  left: '25%', rotate: -8,  zIndex: 4 }, // was 70%
+        { top: '92%',  left: '2%',  rotate: 20,  zIndex: 5 }, // was 100%
+        { top: '117%', left: '32%', rotate: -12, zIndex: 6 }, // was 125%
+        { top: '147%', left: '10%', rotate: 8,   zIndex: 7 }, // was 155%
+        { top: '177%', left: '28%', rotate: -5,  zIndex: 8 }, // was 185%
     ], []);
 
     return (
@@ -739,6 +735,7 @@ const VinylProjects: React.FC = () => {
                             rotateX,
                             rotateY,
                             x: translateX,
+                            scale: 0.8, // 🟢 80% ZOOM EFFECT: Applied scale to main container
                             aspectRatio: '16/9',
                             transformStyle: "preserve-3d",
                         }}
@@ -770,7 +767,7 @@ const VinylProjects: React.FC = () => {
                                 text="PROJECTS" 
                                 rotate={-10} 
                                 className="text-[140px] font-albert-black text-gray-100 leading-none" 
-                                style={{ top: '5%', right: '-10%', left: 'auto' }}
+                                style={{ top: '-5%', right: '-10%', left: 'auto' }} // 🟢 MOVED UP from 5%
                             />
 
                             <div className="absolute w-full h-full pointer-events-none" style={{ zIndex: 10, transformStyle: "preserve-3d", transform: `translateZ(${DEPTHS.PROJECTS}px)` }}>

@@ -129,7 +129,7 @@ const Card3D: React.FC<{ item: typeof CONTACT_CARDS[number]; index: number }> = 
             className="absolute perspective-1000"
             style={{
                 left: '50%',
-                top: '35%', // 🟢 Changed from 25% to 35%
+                top: '25%', // 🟢 Changed from 35% to 25% (Moved UP)
                 x: item.position.x, 
                 y: item.position.y,
                 zIndex: isHovered ? 100 : 10,
@@ -260,6 +260,7 @@ const Contact: React.FC = () => {
                     style={{
                         rotateX: "40deg", // Permanent tilt for the floor
                         y,
+                        scale: 0.8, // 🟢 80% ZOOM EFFECT
                         transformStyle: "preserve-3d",
                     }}
                 >
@@ -269,7 +270,7 @@ const Contact: React.FC = () => {
                         text="CONTACT ME" 
                         rotate={-10} 
                         className="text-[120px] md:text-[180px] font-albert-black text-gray-100 leading-none" 
-                        style={{ top: '50%' }} // 🟢 Changed from 40% to 50%
+                        style={{ top: '40%' }} // 🟢 Changed from 50% to 40% (Moved UP)
                     />
 
                     {/* Cards Container */}

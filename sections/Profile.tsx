@@ -366,7 +366,7 @@ const StablePhoto: React.FC<{ hasEntered: boolean }> = ({ hasEntered }) => {
             ref={ref}
             className="absolute w-[320px] h-[440px] md:w-[400px] md:h-[550px]"
             style={{
-                top: '15%',
+                top: '5%', // 🟢 MOVED UP from 15%
                 left: '15%',
                 zIndex: 20,
                 transformStyle: "preserve-3d",
@@ -463,6 +463,7 @@ const Profile: React.FC = () => {
       target: containerRef,
       offset: ["start start", "end end"]
   });
+  
   const floorY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   // Optimized Springs for smoother tracking
@@ -479,15 +480,18 @@ const Profile: React.FC = () => {
       y.set(clientY / h - 0.5);
   };
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["35deg", "25deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-5deg", "5deg"]);
+  // 🟢 ADJUST PERSPECTIVE HERE
+  // Preserved as requested: "rotateX adjustment made it too tilted... don't change it"
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["23deg", "14deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
   const translateX = useTransform(mouseXSpring, [-0.5, 0.5], ["-1%", "1%"]);
 
+  // 🟢 MOVED UP: Adjusted all card positions upwards
   const cardPositions = [
-      { top: '5%', left: '55%', rotate: '-2deg' },
-      { top: '28%', left: '60%', rotate: '1deg' },
-      { top: '51%', left: '56%', rotate: '-1deg' },
-      { top: '74%', left: '59%', rotate: '2deg' },
+      { top: '0%',  left: '55%', rotate: '-2deg' }, // was 5%
+      { top: '23%', left: '60%', rotate: '1deg' },  // was 28%
+      { top: '46%', left: '56%', rotate: '-1deg' }, // was 51%
+      { top: '69%', left: '59%', rotate: '2deg' },  // was 74%
   ];
 
   return (
@@ -501,7 +505,7 @@ const Profile: React.FC = () => {
          className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center will-change-transform"
          onViewportEnter={() => setHasEntered(true)}
       >
-        <div className="absolute inset-0 flex items-center justify-center perspective-2000">
+        <div className="absolute inset-0 flex items-center justify-center perspective-1000">
             <motion.div
                 className="relative w-full max-w-[1600px] will-change-transform transform-gpu"
                 style={{
@@ -509,6 +513,7 @@ const Profile: React.FC = () => {
                     rotateY,
                     x: translateX,
                     y: floorY,
+                    scale: 0.8, // 🟢 80% ZOOM EFFECT: Applied scale to main container
                     aspectRatio: '16/9',
                     transformStyle: "preserve-3d",
                 }}
@@ -521,14 +526,14 @@ const Profile: React.FC = () => {
                     text="About Me" 
                     rotate={-5} 
                     className="text-[160px] font-albert-black text-gray-100 leading-none" 
-                    style={{ top: '15%', zIndex: 1 }}
+                    style={{ top: '5%', zIndex: 1 }} // 🟢 MOVED UP from 15%
                 />
 
                 {/* Floor Title */}
                 <div 
                     className="absolute pointer-events-none text-center w-[400px]"
                     style={{
-                         top: '5%',
+                         top: '-5%', // 🟢 MOVED UP from 5%
                          left: '15%',
                          transform: `translateZ(${DEPTHS.PROPS}px) rotateX(-5deg)`,
                          zIndex: 5
@@ -544,7 +549,7 @@ const Profile: React.FC = () => {
                 <motion.div 
                     className="absolute text-left pointer-events-auto"
                     style={{ 
-                        top: '80%', 
+                        top: '65%', // 🟢 MOVED UP from 80%
                         left: '22%', 
                         transform: `translateZ(${DEPTHS.MAIN}px) rotateX(-10deg) rotateZ(-5deg)`,
                         width: '450px',

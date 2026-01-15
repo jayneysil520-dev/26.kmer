@@ -256,6 +256,8 @@ const Skills: React.FC = () => {
       target: containerRef,
       offset: ["start start", "end end"]
   });
+  
+  // 🟢 ADJUSTMENT: Adjusted Floor Parallax since content is higher up
   const floorY = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
 
   const x = useMotionValue(0);
@@ -275,12 +277,12 @@ const Skills: React.FC = () => {
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-5deg", "5deg"]);
   const translateX = useTransform(mouseXSpring, [-0.5, 0.5], ["-2%", "2%"]);
 
-  // UPDATED: Shifted everything DOWN by approx 15-20% to avoid top overlap
+  // 🟢 MOVED UP: Adjusted all card positions upwards ~10%
   const cardPositions = [
-      { top: '10%', left: '15%', rotate: -2 },   // was -5%
-      { top: '28%', left: '20%', rotate: 1 },    // was 13%
-      { top: '46%', left: '16%', rotate: -1 },   // was 31%
-      { top: '64%', left: '19%', rotate: 2 },    // was 49%
+      { top: '0%',  left: '15%', rotate: -2 },   // was 10%
+      { top: '18%', left: '20%', rotate: 1 },    // was 28%
+      { top: '36%', left: '16%', rotate: -1 },   // was 46%
+      { top: '54%', left: '19%', rotate: 2 },    // was 64%
   ];
 
   return (
@@ -303,6 +305,7 @@ const Skills: React.FC = () => {
                     rotateY,
                     x: translateX,
                     y: floorY,
+                    scale: 0.8, // 🟢 80% ZOOM EFFECT: Applied scale to main container
                     aspectRatio: '16/9',
                     transformStyle: "preserve-3d",
                 }}
@@ -316,7 +319,7 @@ const Skills: React.FC = () => {
                     text="CAPABILITIES" 
                     rotate={5} 
                     className="text-[140px] font-albert-black text-gray-100 leading-none" 
-                    style={{ top: '0%' }}
+                    style={{ top: '-10%' }} // 🟢 MOVED UP from 0%
                 />
 
                 {/* 2. Skills Stack (Vertical, Slight ZigZag, Compact) */}
@@ -345,7 +348,7 @@ const Skills: React.FC = () => {
                 <div 
                     className="absolute w-full flex justify-start gap-8 pointer-events-auto"
                     style={{
-                        top: '90%', // Moved down
+                        top: '80%', // 🟢 MOVED UP from 90%
                         left: '15%', 
                         transform: `translateZ(${DEPTHS.MAIN}px) rotateX(-10deg)`,
                         zIndex: 20
@@ -366,7 +369,7 @@ const Skills: React.FC = () => {
                 <motion.div
                     className="absolute w-[200px] pointer-events-none will-change-transform"
                     style={{
-                        top: '10%',
+                        top: '-5%', // 🟢 MOVED UP from 10%
                         right: '5%',
                         zIndex: 50,
                         transform: `translateZ(${DEPTHS.PROPS + 100}px) rotateY(-15deg)`,
@@ -392,7 +395,7 @@ const Skills: React.FC = () => {
                         <motion.div
                             className="absolute w-[500px] h-[600px] pointer-events-none"
                             style={{
-                                top: '20%', // Shifted down
+                                top: '10%', // 🟢 MOVED UP from 20%
                                 right: '10%',
                                 zIndex: 15,
                                 transformStyle: "preserve-3d",
@@ -442,7 +445,7 @@ const Skills: React.FC = () => {
                         <motion.div
                             className="absolute w-[250px] h-[250px] pointer-events-none"
                             style={{
-                                top: '70%', // Shifted down
+                                top: '60%', // 🟢 MOVED UP from 70%
                                 right: '15%',
                                 zIndex: 15,
                                 transformStyle: "preserve-3d",

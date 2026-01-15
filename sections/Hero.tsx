@@ -52,11 +52,11 @@ const DEPTHS = {
 // --- LAYOUT CONFIG ---
 // 🟢 UPWARD SHIFT: Moved all 'top' values up by ~10%
 const layoutConfig = [
-    { left: '3%', top: '25%', zIndex: 10 },  // was 35%
-    { left: '58%', top: '30%', zIndex: 12 }, // was 40%
-    { left: '20%', top: '40%', zIndex: 14 }, // was 50%
-    { left: '78%', top: '25%', zIndex: 8 },  // was 35%
-    { left: '44%', top: '35%', zIndex: 15 }, // was 45%
+    { left: '-2%', top: '30%', zIndex: 10 },  // was 35%
+    { left: '62%', top: '35%', zIndex: 12 }, // was 40%
+    { left: '15%', top: '45%', zIndex: 14 }, // was 50%
+    { left: '83%', top: '30%', zIndex: 8 },  // was 35%
+    { left: '46%', top: '42%', zIndex: 15 }, // was 45%
 ];
 
 const Hero: React.FC = () => {

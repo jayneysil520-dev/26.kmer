@@ -7,8 +7,8 @@ import Spotlight3D from '../components/Spotlight3D';
 
 // 🔥 IMPORTANT: Update your long image URL here!
 // 这是一个防止回退的常量。请在这里填入你最新的长图链接。
-// 🟢 FIX: 使用国内镜像
-const PROJECT_1_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
+// 🟢 FIX: 使用国内镜像，https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png
+const PROJECT_1_LONG_IMAGE = 'https://raw.githubusercontent.com/jayneysil520-dev/jayneysil/refs/heads/main/%E6%89%80%E6%9C%89IP%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
 const PROJECT_1_LONG_IMAGE_2 = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E6%88%91%E7%9A%84%E4%BD%8D%E7%BD%AE1-11.png';
 const PROJECT_2_LONG_IMAGE = 'https://jsd.cdn.zzko.cn/gh/jayneysil520-dev/jayneysil@main/%E5%BE%97%E5%8A%9B%E8%9B%8B%E4%BB%94%E9%95%BF%E5%9B%BE1-11.png';
 
@@ -442,7 +442,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                             {/* --- 1. FEHN SECTION --- */}
                             <motion.div
                                 // 🟢 Using percentage positioning relative to total height
-                                style={{ position: 'absolute', ...getPos(200, 2675), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(215, 2850), zIndex: 50 }}
                                 initial={{ x: -100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }} 
@@ -453,7 +453,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(213, 2900), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(228, 3070), zIndex: 50 }}
                                 initial={{ x: -50, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
@@ -464,7 +464,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                              <motion.div
-                                style={{ position: 'absolute', ...getPos(1450, 2820), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(1535, 3005), zIndex: 50 }}
                                 initial={{ x: 100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }} 
@@ -477,7 +477,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
 
                             {/* --- 2. RABBI SECTION --- */}
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(200, 4695), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(215, 5005), zIndex: 50 }}
                                 initial={{ x: -100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }} 
@@ -488,7 +488,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(213, 4908), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(228, 5225), zIndex: 50 }}
                                 initial={{ x: -50, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
@@ -499,7 +499,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                              <motion.div
-                                style={{ position: 'absolute', ...getPos(1200, 4820), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(1315, 5155), zIndex: 50 }}
                                 initial={{ x: 100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }} 
@@ -512,7 +512,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
 
                             {/* --- 3. CARRO SECTION --- */}
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(200, 6710), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(215, 7155), zIndex: 50 }}
                                 initial={{ x: -100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }} 
@@ -523,7 +523,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(215, 6932), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(230, 7378), zIndex: 50 }}
                                 initial={{ x: -50, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
@@ -534,7 +534,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                              <motion.div
-                                style={{ position: 'absolute', ...getPos(1400, 6855), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(1515, 7305), zIndex: 50 }}
                                 initial={{ x: 100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }} 
@@ -547,7 +547,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
 
                             {/* --- 4. OLLIE SECTION --- */}
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(200, 8735), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(215, 9310), zIndex: 50 }}
                                 initial={{ x: -100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }} 
@@ -558,7 +558,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(215, 8952), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(230, 9528), zIndex: 50 }}
                                 initial={{ x: -50, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
@@ -569,7 +569,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                              <motion.div
-                                style={{ position: 'absolute', ...getPos(1425, 8875), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(1531, 9450), zIndex: 50 }}
                                 initial={{ x: 100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }} 
@@ -582,7 +582,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
 
                             {/* --- 5. OLIVER SECTION --- */}
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(200, 10755), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(215, 11455), zIndex: 50 }}
                                 initial={{ x: -100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }} 
@@ -593,7 +593,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                             <motion.div
-                                style={{ position: 'absolute', ...getPos(215, 10977), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(230, 11677), zIndex: 50 }}
                                 initial={{ x: -50, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
@@ -604,7 +604,7 @@ const GalleryModalView: React.FC<{ images: string[], projectId?: number }> = ({ 
                                 </span>
                             </motion.div>
                              <motion.div
-                                style={{ position: 'absolute', ...getPos(1410, 10900), zIndex: 50 }}
+                                style={{ position: 'absolute', ...getPos(1520, 11600), zIndex: 50 }}
                                 initial={{ x: 100, opacity: 0 }} 
                                 whileInView={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }} 
